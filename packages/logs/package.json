@@ -1,5 +1,5 @@
 {
-  "name": "@repo/validations",
+  "name": "@repo/logs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "exports" : {
-    "./schemas" : "./schema.ts"
+    "./logs" : "./index.ts"
   }
 }
