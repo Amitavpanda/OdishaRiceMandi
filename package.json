@@ -8,6 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@repo/validations" : "*",
+    "@repo/logs" : "*",
     "@repo/db": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
