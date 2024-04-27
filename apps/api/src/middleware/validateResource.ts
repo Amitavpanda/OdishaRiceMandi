@@ -14,7 +14,7 @@ const validate = (schema : AnyZodObject) => (req : Request, res : Response, next
     }
     catch(e : any){
         info("Validation errors");
-        error("Validation errors in adding category", e.errors);
+        error("Validation errors in ", e.errors);
         return res.status(400).send(e.errors);
     }
 }  
