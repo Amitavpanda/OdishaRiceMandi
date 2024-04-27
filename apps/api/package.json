@@ -6,16 +6,17 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc",
-    "dev" : "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@repo/db": "*",
+    "@repo/logs": "*",
+    "@repo/validations": "*",
+    "@types/uuid": "^9.0.8",
     "esbuild": "^0.20.2",
-    "@repo/db" : "*",
-    "@repo/logs" : "*",
-    "@repo/validations" : "*"
-
+    "uuid": "^9.0.1"
   }
 }

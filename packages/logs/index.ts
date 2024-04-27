@@ -10,6 +10,6 @@ const logger = pino({
   })
 
 
-export const info = (message : string, parameter? : any) => logger.info(message, parameter);
+export const info = (message : string, parameter? : any) => logger.info({message, parameter});
 export const error = (message : string, error?: Error) =>  logger.error({message, error});
 export const debug = (message : string) => logger.debug(message);

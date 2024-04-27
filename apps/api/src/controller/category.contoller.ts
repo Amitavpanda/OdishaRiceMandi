@@ -5,7 +5,7 @@ import { updateCategory } from "../service/category.service";
 export async function addCategoryHandler(req : Request, res : Response) {
 
     const body = req.body;
-    info("req body :", body);
+    info("req body :", {body});
     const response = await addCategory(body);
 
     return res.send(response);

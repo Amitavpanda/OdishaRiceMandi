@@ -23,6 +23,20 @@ model Category {
   id Int @id @default(autoincrement())
   name String
   pic String
+  products Product[]
 }
 
 
+model Product{
+  id String @id @default(uuid()) @unique
+  name String
+  category Category @relation(fields: [categoryId] , references: [id])
+  categoryId Int
+  isSpecialProduct Boolean
+  productPic String
+  price Float
+  quantity Int
+  reviews Int
+  isAvailable Boolean
+
+}
