@@ -17,6 +17,8 @@ const port = process.env.PORT || 1338;
 
 app.listen(port , async () => {
     info(`App is running at port: http://localhost:${port}`);
+    info("value",process.env.FIREBASE_API_KEY)
+
     routes(app);
 
 })
