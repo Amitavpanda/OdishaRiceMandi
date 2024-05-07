@@ -14,29 +14,38 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String @unique
-  name String?
+  id          String  @id @unique @default(uuid())
+  phoneNumber String
+  name        String?
 }
 
 model Category {
-  id Int @id @default(autoincrement())
-  name String
-  pic String
+  id       Int       @id @default(autoincrement())
+  name     String
+  pic      String
   products Product[]
 }
 
-
-model Product{
-  id String @id @default(uuid()) @unique
-  name String
-  category Category @relation(fields: [categoryId] , references: [id])
-  categoryId Int
+model Product {
+  id               String   @id @unique @default(uuid())
+  name             String
+  category         Category @relation(fields: [categoryId], references: [id])
+  categoryId       Int
   isSpecialProduct Boolean
-  productPic String
-  price Float
-  quantity Int
-  reviews Int
-  isAvailable Boolean
+  productPic       String
+  price            Float
+  quantity         Int
+  reviews          Int
+  isAvailable      Boolean
+}
 
+model Orders {
+  id              String   @id @unique @default(uuid())
+  name            String
+  phoneNumber     String
+  address         String
+  productsOrdered String[]
+  orderStatus     String   @default("pending")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }

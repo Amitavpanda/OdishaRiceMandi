@@ -11,6 +11,8 @@
   "license": "ISC",
   "exports" : {
     "./schemas" : "./schema.ts",
-    "./products" : "./product.schema.ts"
+    "./products" : "./product.schema.ts",
+    "./users" : "./user.schema.ts",
+    "./orders" : "./orders.schema.ts"
   }
 }
