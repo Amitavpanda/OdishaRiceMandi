@@ -23,7 +23,7 @@ function routes(app : Express){
     app.put('/api/categories/:categoryId', validate(updateCategorySchema), updateCategoryHandler);
     app.put('/api/products/:productId', validate(updateProductSchema), updateProductHandler);
 
-    app.get('/api/products/getOrders', getOrdersHandler)
+    app.get('/api/orders/getOrders', getOrdersHandler)
     app.get('/api/products/getProducts', getProductHandler)
     app.get('/api/categories/getCategories', getCategoriesHandler);
 

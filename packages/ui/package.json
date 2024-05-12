@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./button": "./@/components/ui/button.tsx"
+    "./button": "./@/components/ui/button.tsx",
+    "./dropdownMenu" : "./@/components/ui/dropdown-menu.tsx",
+    "./card" : "./@/components/ui/card.tsx",
+    "./table" : "./@/components/ui/table.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
