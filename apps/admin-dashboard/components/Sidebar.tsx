@@ -35,7 +35,7 @@ export default function Sidebar() {
         const fetchCategories = async () => {
             console.log("I am getting called")
             try {
-                const response: AxiosResponse<Category[]> = await axios.get('http://localhost:1337/api/categories/getCategories');
+                const response: AxiosResponse<{ data: Category[] }>  = await axios.get('http://localhost:1337/api/categories/getCategories');
                 info("the response of categories is", response);
                 if (response.status == 200) {
                     console.log("the response.data is ", response.data.data);

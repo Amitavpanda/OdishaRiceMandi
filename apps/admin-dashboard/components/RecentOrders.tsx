@@ -26,7 +26,7 @@ export default  function RecentOrders() {
         const fetchOrders = async () => {
     
             try {
-                const response: AxiosResponse<Order[]> = await axios.get('http://localhost:1337/api/orders/getOrders');
+                const response: AxiosResponse<{ data: Order[] }> = await axios.get('http://localhost:1337/api/orders/getOrders');
                 info("the response of orders is", response);
                 if (response.status == 200) {
                     console.log("the response.data is ", response.data.data);
