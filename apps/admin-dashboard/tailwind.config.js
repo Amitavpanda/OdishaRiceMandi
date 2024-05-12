@@ -25,8 +25,8 @@ module.exports = {
         grey: {
           600: '#545454', // Subdued - color name in figma
           500: '#757575',
-          400: '#AFAFAF', // Disabled - color name in figma
-          50: '#F6F6F6', // White Grey - color name in figma
+          400: '#F4F2F2', // Disabled - color name in figma
+          50: '#E7E7E3', // White Grey - color name in figma
         },
         green: {
           50: '#30AF5B',
@@ -37,6 +37,7 @@ module.exports = {
           20: '#A2A2A2',
           30: '#7B7B7B',
           50: '#585858',
+          60 : '#1E1E1E',
           90: '#141414',
         },
         orange: {
@@ -44,6 +45,7 @@ module.exports = {
         },
         blue: {
           70: '#021639',
+          90 : '#003F62'
         },
         yellow: {
           50: '#FEC601',
