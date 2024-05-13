@@ -21,7 +21,7 @@ import { useEffect, useState } from "react";
 import { error, info } from "@repo/logs/logs";
 import Link from "next/link";
 
-interface Category {
+export interface Category {
     id: number;
     name: string;
     pic: string

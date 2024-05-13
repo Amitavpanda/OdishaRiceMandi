@@ -27,7 +27,7 @@ import { useState } from "react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  data: any
 }
 
 export function DataTable<TData, TValue>({
@@ -58,10 +58,10 @@ export function DataTable<TData, TValue>({
     <div>
       <div className="flex items-center py-4 rounded-2xl shadow-lg">
         <Input
-          placeholder="Filter by phoneNumber"
-          value={(table.getColumn("phoneNumber")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter by name"
+          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("phoneNumber")?.setFilterValue(event.target.value)
+            table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="max-w-sm rounded-2xl"
         />
