@@ -29,16 +29,11 @@ import RecentOrders from "../components/RecentOrders";
 
 
 export default async function Page() {
-  
-
-
-  
-
 
 
   return (
     <>
-      <div className="bg-gray-10 min-h-screen p-20">
+      <div className="bg-gray-10 p-20">
 
         {/* 1st portion */}
         <div>
@@ -50,7 +45,7 @@ export default async function Page() {
 
           {/* first col */}
           <div>
-            <Card className="rounded-xl bg-white">
+            <Card className="rounded-xl bg-white shadow-lg">
               <CardHeader>
                 <CardTitle className="font-[500]">Best Sellers</CardTitle>
                 <CardDescription className="text-wrap ">These are the products which are giving good sales right now</CardDescription>
@@ -84,7 +79,7 @@ export default async function Page() {
           {/* 2nd col */}
           <div className="flex flex-col gap-y-5">
             {/* 1st row */}
-            <Card className="rounded-xl bg-white">
+            <Card className="rounded-xl bg-white shadow-lg">
               <CardHeader>
                 <CardTitle className="bold-20">Total Orders</CardTitle>
                 <CardDescription>
@@ -103,7 +98,7 @@ export default async function Page() {
               </CardHeader>
             </Card>
             {/* 2nd row */}
-            <Card className="rounded-xl bg-white">
+            <Card className="rounded-xl bg-white shadow-lg">
               <CardHeader>
                 <CardTitle className="bold-20">Total Sales in this month</CardTitle>
                 <CardDescription>

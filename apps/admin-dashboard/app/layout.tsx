@@ -15,7 +15,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="flex flex-row min-h-screen">
+      <body className="flex flex-row ">
         <Sidebar />
         <main className="flex-1">
           {children}

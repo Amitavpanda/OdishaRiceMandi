@@ -28,64 +28,79 @@ export type Order = {
 export const columns: ColumnDef<Order>[] = [
   {
     accessorKey: "id",
-    header: "OrderID",
+    header: "Product ID",
   },
   {
     accessorKey: "name",
-    header: "name of the customer",
+    header: "Name",
   },
   {
-    accessorKey: "phoneNumber",
-    header: "Phone Number",
+    accessorKey: "categoryId",
+    header: "Category Id",
   },
 
   {
-    accessorKey: "address",
-    header: "Address",
+    accessorKey: "isSpecialProduct",
+    header: ({ column }) => {
+        return (
+          <Button
+            variant="ghost"
+            onClick={() => {
+              column.toggleSorting(column.getIsSorted() === "asc")}}
+          >
+            Special Product or not
+            <ArrowUpDown className="ml-2 h-4 w-4" />
+          </Button>
+        )
+      },
   },
   {
-    accessorKey: "productsOrdered",
-    header: "Products Ordered",
+    accessorKey: "productPic",
+    header: "product Pic",
   },
   {
-    accessorKey: "orderStatus",
+    accessorKey: "price",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => {
-            info("the button is clicked");
             column.toggleSorting(column.getIsSorted() === "asc")}}
         >
-          Order Status
+          Price
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
   },
 
+
+
   {
-    accessorKey: "createdAt",
+    accessorKey: "quantity",
     header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => {
-            info("the button is clicked");
-            column.toggleSorting(column.getIsSorted() === "asc")}}
-        >
-          created At
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-
+        return (
+          <Button
+            variant="ghost"
+            onClick={() => {
+              column.toggleSorting(column.getIsSorted() === "asc")}}
+          >
+            Available Stock
+            <ArrowUpDown className="ml-2 h-4 w-4" />
+          </Button>
+        )
+      },
+  },
+  {
+    accessorKey: "reviews",
+    header: "Reviews",
   },
 
   {
-    accessorKey: "updatedAt",
-    header: "Updated At",
+    accessorKey: "isAvailable",
+    header: "Available or not",
   },
+
   {
     id: "actions",
     cell: ({ row }) => {

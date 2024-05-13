@@ -6,7 +6,8 @@
     "./button": "./@/components/ui/button.tsx",
     "./dropdownMenu" : "./@/components/ui/dropdown-menu.tsx",
     "./card" : "./@/components/ui/card.tsx",
-    "./table" : "./@/components/ui/table.tsx"
+    "./table" : "./@/components/ui/table.tsx",
+    "./input" : "./@/components/ui/input.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
